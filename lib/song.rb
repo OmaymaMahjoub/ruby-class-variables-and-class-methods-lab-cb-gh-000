@@ -1,7 +1,7 @@
 class Song
-  @@artists={}
+  @@artists=Hash.new
   @@count=0
-  @@genres={}
+  @@genres=Hash.new
   attr_reader :name, :artist, :genre
   def initialize(name,artist,genre)
     @name=name
