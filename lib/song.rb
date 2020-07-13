@@ -28,6 +28,6 @@ class Song
 
   def genre_count
     hash{}
-    
+
   end
 end
