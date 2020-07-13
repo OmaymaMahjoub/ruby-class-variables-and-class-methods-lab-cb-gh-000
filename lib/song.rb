@@ -32,7 +32,7 @@ class Song
 
   def self.genre_count
     h={}
-    @@genre.each do |gen|
+    @@genres.each do |gen|
       if h[gen]==nil
         h[gen]=1
       else
@@ -53,7 +53,12 @@ class Song
   end
 
   def self.genres
-
+    h=genre_count
+    arr=Array.new
+    h.each do |key,value|
+      arr<<key
+    end
+    return arr
   end
 
 end
