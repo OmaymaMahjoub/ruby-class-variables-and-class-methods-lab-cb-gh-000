@@ -19,15 +19,23 @@ class Song
   end
 
   def self.artists
-    @artists
+    
+
   end
 
   def self.genres
-    return @@genres
+    @@genres
   end
 
-  def genre_count
-    hash{}
-
+  def artist_count
+    h={}
+    @@artists.each do |ar|
+      if h[ar]==nil
+        h[ar]=1
+      else
+        h[ar]+=1
+      end
+    end
+    return h    
   end
 end
