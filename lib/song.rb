@@ -18,15 +18,6 @@ class Song
     @@count
   end
 
-  def self.artists
-
-
-  end
-
-  def self.genres
-    @@genres
-  end
-
   def self.artist_count
     h={}
     @@artists.each do |ar|
@@ -38,6 +29,7 @@ class Song
     end
     return h
   end
+
   def self.genre_count
     h={}
     @@genre.each do |gen|
@@ -49,4 +41,17 @@ class Song
     end
     return h
   end
+
+  
+  def self.artists
+    h=artist_count
+    h.each do |key,value|
+      key
+    end
+  end
+
+  def self.genres
+    
+  end
+
 end
