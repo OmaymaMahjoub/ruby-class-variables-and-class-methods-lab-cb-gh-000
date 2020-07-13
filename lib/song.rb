@@ -1,7 +1,8 @@
 class Song
   @@count=0
-  @@artists=[]
-  @@genres=[]
+  @@artists=Array.new
+  @@genres=Array.new
+  
   def initialize(name,artist,genre)
     @name=name
     @artist=artist
@@ -11,7 +12,7 @@ class Song
     @genres<<genre
   end
 
-  def attr_reader :name, :genre, :artist
+  attr_reader :name, :genre, :artist
 
   def self.count
     @@count
