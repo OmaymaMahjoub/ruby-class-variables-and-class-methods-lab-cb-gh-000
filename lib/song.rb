@@ -42,7 +42,7 @@ class Song
     return h
   end
 
-  
+
   def self.artists
     h=artist_count
     h.each do |key,value|
@@ -51,7 +51,7 @@ class Song
   end
 
   def self.genres
-    
+
   end
 
 end
