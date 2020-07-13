@@ -3,26 +3,20 @@ class Song
   @@count=0
   @@genres={}
   attr_reader :name, :artist, :genre
-  def self.add_genre(genre)
-    if @@genres[genre]==nil
-      @@genres[genre]=1
-    else
-      @@genres[genre]+=1
-    end
-  end
-  def self.add_artist(artist)
+  def initialize(name,artist,genre)
+    @name=name
+    @artist=artist
+    @genre=genre
     if @@artists[artist]==nil
       @@artists[artist]=1
     else
       @@artists[artist]+=1
     end
-  end
-  def initialize(name,artist,genre)
-    @name=name
-    @artist=artist
-    @genre=genre
-    add_artist(artist)
-    add_genre(genre)
+    if @@genres[genre]==nil
+      @@genres[genre]=1
+    else
+      @@genres[genre]+=1
+    end
     @@count+=1
   end
   def self.count
