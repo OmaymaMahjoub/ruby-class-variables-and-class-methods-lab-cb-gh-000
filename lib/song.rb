@@ -19,7 +19,7 @@ class Song
   end
 
   def self.artists
-    
+
 
   end
 
@@ -36,6 +36,6 @@ class Song
         h[ar]+=1
       end
     end
-    return h    
+    return h
   end
 end
