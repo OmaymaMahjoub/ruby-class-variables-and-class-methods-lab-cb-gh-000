@@ -9,7 +9,7 @@ class Song
     @genre=genre
     @@count+=1
     @@artists.push(artist)
-    @genres.push(genre)
+    @@genres.push(genre)
   end
 
   attr_reader :name, :genre, :artist
