@@ -11,6 +11,9 @@ class Song
     add_genre(genre)
     @@count+=1
   end
+  def self.count
+    @@count
+  end
   def self.add_genre(genre)
     if @@genres[genre]==nil
       @@genres[genre]=1
