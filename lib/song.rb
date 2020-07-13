@@ -8,8 +8,8 @@ class Song
     @artist=artist
     @genre=genre
     @@count+=1
-    @@artists<<artist
-    @genres<<genre
+    @@artists.push(artist)
+    @genres.push(genre)
   end
 
   attr_reader :name, :genre, :artist
