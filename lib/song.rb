@@ -3,17 +3,6 @@ class Song
   @@count=0
   @@genres={}
   attr_reader :name, :artist, :genre
-  def initialize(name,artist,genre)
-    @name=name
-    @artist=artist
-    @genre=genre
-    add_artist(artist)
-    add_genre(genre)
-    @@count+=1
-  end
-  def self.count
-    @@count
-  end
   def self.add_genre(genre)
     if @@genres[genre]==nil
       @@genres[genre]=1
@@ -27,6 +16,17 @@ class Song
     else
       @@artists[artist]+=1
     end
+  end
+  def initialize(name,artist,genre)
+    @name=name
+    @artist=artist
+    @genre=genre
+    add_artist(artist)
+    add_genre(genre)
+    @@count+=1
+  end
+  def self.count
+    @@count
   end
   def self.genres
     @@genres.each do |key,value|
