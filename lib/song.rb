@@ -18,12 +18,16 @@ class Song
     @@count
   end
 
-  def self.artists
+  def artists
     @@artists
   end
 
-  def self.genres
+  def genres
     @@genres
   end
 
+  def genre_count
+    hash{}
+    
+  end
 end
