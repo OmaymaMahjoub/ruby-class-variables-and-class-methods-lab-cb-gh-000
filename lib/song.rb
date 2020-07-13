@@ -11,35 +11,35 @@ class Song
     add_genre(genre)
     @@count+=1
   end
-  def add_genre(genre)
+  def self.add_genre(genre)
     if @@genres[genre]==nil
       @@genres[genre]=1
     else
       @@genres[genre]+=1
     end
   end
-  def add_artist(artist)
+  def self.add_artist(artist)
     if @@artists[artist]==nil
       @@artists[artist]=1
     else
       @@artists[artist]+=1
     end
   end
-  def genres
+  def self.genres
     @@genres.each do |key,value|
       key
     end
   end
-  def artists
+  def self.artists
     @@arists.each do |key,value|
       key
     end
   end
-  def genre_count
+  def self.genre_count
     @@genres
   end
-  def artist_count
-    @@artists.size
+  def self.artist_count
+    @@artists
   end
 
 end
