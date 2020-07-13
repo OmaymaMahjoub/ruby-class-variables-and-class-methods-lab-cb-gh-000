@@ -41,5 +41,5 @@ class Song
   def artist_count
     @@artists.size
   end
-  
+
 end
