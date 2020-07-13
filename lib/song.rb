@@ -38,4 +38,15 @@ class Song
     end
     return h
   end
+  def self.genre_count
+    h={}
+    @@genre.each do |gen|
+      if h[gen]==nil
+        h[gen]=1
+      else
+        h[gen]+=1
+      end
+    end
+    return h
+  end
 end
