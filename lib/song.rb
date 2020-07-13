@@ -45,9 +45,11 @@ class Song
 
   def self.artists
     h=artist_count
+    arr=Array.new
     h.each do |key,value|
-      key
+      arr<<key
     end
+    return arr
   end
 
   def self.genres
