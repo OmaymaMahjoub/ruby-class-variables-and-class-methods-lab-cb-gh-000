@@ -7,12 +7,12 @@ class Song
     @name=name
     @artist=artist
     @genre=genre
-    if @@artists[artist]==nil
+    if @@artists.key?(artist)==false
       @@artists[artist]=1
     else
       @@artists[artist]+=1
     end
-    if @@genres[genre]==nil
+    if @@genres.key?(genre)==false
       @@genres[genre]=1
     else
       @@genres[genre]+=1
