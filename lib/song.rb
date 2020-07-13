@@ -1,5 +1,5 @@
 class Song
-  @@artists=[]
+  @@artists={}
   @@count=0
   @@genres={}
   attr_accessor :name, :artist, :genre
@@ -19,8 +19,27 @@ class Song
     end
   end
   def add_artist(artist)
-    if artists.include?(artist)==false
-      artists<<artist
+    if @@artists[artist]==nil
+      @@artists[artist]=1
+    else
+      @@artists[artist]+=1
     end
   end
+  def genres
+    @@genres.each do |key,value|
+      key
+    end
+  end
+  def artists
+    @@arists.each do |key,value|
+      key
+    end
+  end
+  def genre_count
+    @@genres
+  end
+  def artist_count
+    @@artists.size
+  end
+  
 end
